@@ -22,6 +22,8 @@ public class Program extends Application {
             scrollPane.setFitToHeight(true);
             scrollPane.setFitToWidth(true);
             
+            String css = Program.class.getResource("application.css").toExternalForm();
+            scrollPane.getStylesheets().add(css);
             
             mainScene = new Scene(scrollPane);
             primaryStage.setScene(mainScene);

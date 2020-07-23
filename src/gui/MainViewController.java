@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
@@ -19,6 +20,15 @@ import model.services.DepartmentService;
 
 public class MainViewController implements Initializable {
 
+    @FXML
+    private ScrollPane scrollPane;
+    
+    @FXML 
+    private VBox vBox;
+    
+    @FXML
+    private MenuBar menuBar;
+    
     @FXML
     private MenuItem menuItemSeller;
 
