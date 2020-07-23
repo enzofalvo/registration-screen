@@ -12,7 +12,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.ToolBar;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import model.entities.Department;
 import model.services.DepartmentService;
@@ -20,9 +22,12 @@ import model.services.DepartmentService;
 public class DepartmentListController implements Initializable {
 
     private DepartmentService service;
+    
+    @FXML
+    private VBox vBox;
 
     @FXML
-    private TableView<Department> tableViewDepartment;
+    private TableView <Department> tableViewDepartment;
 
     @FXML
     private TableColumn<Department, Integer> tableColumnId;
@@ -32,6 +37,9 @@ public class DepartmentListController implements Initializable {
 
     @FXML
     private Button btNew;
+    
+    @FXML
+    private ToolBar toolBar;
 
     private ObservableList <Department> obsList;
     

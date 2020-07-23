@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="505.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentListController">
+<VBox fx:id="vBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="320.0" prefWidth="505.0" stylesheets="@DepartmentList.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.DepartmentListController">
    <children>
       <Label text="Department registration">
          <font>
@@ -19,7 +19,7 @@
             <Insets left="5.0" top="5.0" />
          </padding>
       </Label>
-      <ToolBar prefHeight="40.0" prefWidth="200.0">
+      <ToolBar fx:id="toolBar" prefHeight="40.0" prefWidth="200.0" stylesheets="@DepartmentList.css">
         <items>
           <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" prefHeight="22.0" prefWidth="35.0" text="New">
                <padding>

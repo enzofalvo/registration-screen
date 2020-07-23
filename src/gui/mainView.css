@@ -4,5 +4,8 @@ MenuBar {
 ScrollPane {
     -fx-background-color: #39333d;
 }
+VBox {
+    -fx-background-color: #fcf8e4;
+}
 
 
