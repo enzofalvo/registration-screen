@@ -4,3 +4,9 @@ VBox {
 ToolBar {
     -fx-background-color: #fcf8e4;
 }
+TableView {
+    -fx-background-color: #fcf8e4;
+}
+TableColumn {
+    --fx-background-color: #fcf8e4;
+}
