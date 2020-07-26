@@ -1,6 +1,7 @@
 package gui;
 
 import application.Program;
+import gui.listeners.DataChangeListener;
 import gui.util.Alerts;
 import gui.util.Utils;
 import java.io.IOException;
@@ -27,7 +28,7 @@ import javafx.stage.Stage;
 import model.entities.Department;
 import model.services.DepartmentService;
 
-public class DepartmentListController implements Initializable {
+public class DepartmentListController implements Initializable, DataChangeListener {
 
     private DepartmentService service;
     
@@ -62,6 +63,16 @@ public class DepartmentListController implements Initializable {
         this.service = service;
     }
 
+    public TableColumn<Department, Integer> getTableColumnId() {
+        return tableColumnId;
+    }
+
+    public void setTableColumnId(TableColumn<Department, Integer> tableColumnId) {
+        this.tableColumnId = tableColumnId;
+    }
+    
+    
+
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         initializeNodes();
@@ -95,6 +106,7 @@ public class DepartmentListController implements Initializable {
             DepartmentFormController controller = loader.getController();
             controller.setDepartment(obj);
             controller.setDepartmentService(new DepartmentService());
+            controller.subscribeDataChangeListener(this);
             controller.updateFormData();
             
             Stage dialogStage = new Stage();
@@ -111,6 +123,12 @@ public class DepartmentListController implements Initializable {
         catch (IOException e) {
             Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), Alert.AlertType.ERROR);
         }
+    }
+
+    @Override
+    public void onDataChanged() {
+        updateTableView();
+        
     }
 
 }

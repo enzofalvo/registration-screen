@@ -21,7 +21,7 @@
       </Label>
       <ToolBar fx:id="toolBar" prefHeight="40.0" prefWidth="200.0" stylesheets="@DepartmentList.css">
         <items>
-          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" prefHeight="22.0" prefWidth="35.0" text="New">
+          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" prefHeight="22.0" prefWidth="35.0" stylesheets="@DepartmentList.css" text="New">
                <padding>
                   <Insets left="5.0" />
                </padding>

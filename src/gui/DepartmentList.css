@@ -7,6 +7,9 @@ ToolBar {
 TableView {
     -fx-background-color: #fcf8e4;
 }
-TableColumn {
+tableColumnId {
     --fx-background-color: #fcf8e4;
+}
+Button {
+     --fx-background-color: #fcf8e4;
 }
