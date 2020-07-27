@@ -18,6 +18,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import model.entities.Department;
 import model.exceptions.ValidationException;
 import model.services.DepartmentService;
@@ -30,6 +31,9 @@ public class DepartmentFormController implements Initializable {
     
     private List <DataChangeListener> dataChangeListener = new ArrayList<>();
 
+    @FXML
+    private AnchorPane anchorPane;
+    
     @FXML
     private TextField txtId;
 
